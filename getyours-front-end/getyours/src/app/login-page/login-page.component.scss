@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+}
+
+.logo{
+    display: block;
+    width: 258px;
+    height: 44px;
+    background-image: url('../../resources/logo.png');
+}
+
+.sign-in-and-illustrations-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sign-in-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #493e99;
+    width: 295px;
+    height: 365px;
+    z-index: 50;
+    box-shadow: 10px 10px white;
+}
+
+.sign-in--form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.sign-in--heading{
+    font-family: 'Bona Nova', serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+}
+
+.sing-in--button{
+    font-family: 'Bona Nova', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color:#493e99;
+    height: 54px;
+    width: 87%;
+    margin: 12px auto 10px auto;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.sing-in--button::hover{
+    background-color: #e6e2ff;
+    cursor: pointer;
+}
+
+.getyours-input-field{
+    display: block;
+    width: 87%;
+    height: 54px;
+    border: 2.67052px solid #FFFFFF;
+    background-color:  #ffffff00;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    font-size: 12;
+    padding-left: 18px;
+}
+
+.getyours-input-field:focus{
+    outline: none;
+}
+
+.getyours-input-field::placeholder{
+    color: rgba(255, 255, 255, 0.656)
+}
+
+.sign-in--register-link{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.illustration-container{
+    margin-left: 10%;
+}
+
+.illustration--img{
+    background-image: url('../../resources/illustration.png');
+    display: block;
+    width: 360px;
+    height: 360px;
+}
+
+.illustration--caption{
+    font-family: 'Bona Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color:#493e99;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #493e99;
+    text-align: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 8;
+}
