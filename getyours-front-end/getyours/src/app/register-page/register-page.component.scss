@@ -32,7 +32,7 @@ body{
     background-image: url('../../resources/logo.png');
 }
 
-.sign-in-and-illustrations-container{
+.register-and-illustrations-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -40,10 +40,10 @@ body{
 
 }
 
-.sign-in-container{
+.register-container{
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     background-color: #493e99;
     width: 295px;
     height: 365px;
@@ -51,14 +51,14 @@ body{
     box-shadow: 10px 10px white;
 }
 
-.sign-in--form{
+.register--form{
     display: flex;
     flex-direction: column;
     width: 100%;
 
 }
 
-.sign-in--heading{
+.register--heading{
     margin-bottom: 30px;
     font-family: 'Bona Nova', serif;
     font-weight: 700;
@@ -106,7 +106,7 @@ body{
     color: rgba(255, 255, 255, 0.656)
 }
 
-.sign-in--register-link{
+.register--register-link{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 12px;
