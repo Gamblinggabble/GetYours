@@ -1,0 +1,155 @@
+$accent-color: #493e99;
+
+
+.product-panel-container {
+    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 2.4fr 1fr 0.1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "reference reference"
+    "image image"
+    "heading heading"
+    "line line"
+    "initial current";
+  width: 288px;
+  height: 354px;
+  margin: 23px 22px;
+  padding: 18px;
+  box-shadow: 10px 10px $accent-color;
+  background-color: white;
+  cursor: pointer;
+  animation: 0.2s ease-in-out box-shadow-animation-accent-color-out;
+}
+
+.product-panel-container:hover {
+  animation: 0.2s ease-in-out box-shadow-animation-accent-color;
+  box-shadow: 3px 3px $accent-color;
+}
+
+@keyframes box-shadow-animation-accent-color {
+  from {
+    box-shadow: 10px 10px $accent-color;
+  }
+  to {
+    box-shadow: 3px 3px $accent-color;
+  }
+}
+
+@keyframes box-shadow-animation-accent-color-out {
+  from {
+    box-shadow: 3px 3px $accent-color;
+  }
+  to {
+    box-shadow: 10px 10px $accent-color;
+  }
+}
+
+.product-panel--reference {
+  grid-area: reference;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.reference-website-logo{
+    display: flex;
+    align-items: center;
+}
+
+.reference-logo{
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: pink;
+    // background-image: url('https://media-exp1.licdn.com/dms/image/C4D0BAQHpqciy9IPrJg/company-logo_200_200/0/1623658362871?e=2159024400&v=beta&t=LRGkQ3RU4GpKi75XXfkBU6FgQL9JLHHsBEpThykuXe8');
+}
+
+.reference-website{
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.reference-link-icon{
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('../../resources/decoration/link.icon.png');
+}
+
+
+.product-panel--image {
+  grid-area: image;
+  display: block;
+  margin-top:5px;
+  width: 100%;
+  height: 165px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-panel--heading {
+  grid-area: heading;
+  font-family: 'Bona Nova', sans-serif !important;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+
+  //ToDo What is the best way to vizualise that part???
+  align-self: center;
+}
+
+.product-panel--line-decoration {
+  grid-area: line;
+  border-bottom: 1px dashed black;
+}
+
+.gy-price{
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.gy-price-label{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+.product-panel--initial-price {
+  grid-area: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 8px;
+  color: rgb(163, 163, 163);
+}
+
+.initial-price--price{
+    text-decoration: line-through;
+}
+
+.product-panel--current-price {
+  grid-area: current;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0px;
+  border: 2px $accent-color dashed;
+  color: $accent-color;
+}
