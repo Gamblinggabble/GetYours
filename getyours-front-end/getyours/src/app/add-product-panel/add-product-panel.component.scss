@@ -1,0 +1,53 @@
+.add-product-panel--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 288px;
+    height: 354px;
+    margin: 23px 22px;
+    box-shadow: 10px 10px white;
+    background-color: #493e99;
+    cursor: pointer;
+    animation: 0.2s ease-in-out box-shadow-animation-white-out;
+}
+
+.add-product-panel--container:hover{
+    animation: 0.2s ease-in-out box-shadow-animation-white;
+    box-shadow: 3px 3px white;
+}
+
+@keyframes box-shadow-animation-white {
+    from{
+        box-shadow: 10px 10px white;
+    }
+    to{
+        box-shadow: 3px 3px white;
+    }
+}
+
+@keyframes box-shadow-animation-white-out {
+    from{
+        box-shadow: 3px 3px white;
+    }
+    to{
+        box-shadow: 10px 10px white;
+    }
+}
+
+.add-product-panel--plus-symbol{
+    text-align: center;
+    font-size: 128px;
+    line-height: 100px;
+    color: white;
+    font-family: 'Bona Nova', serif;
+}
+
+.add-product-panel--text{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Bona Nova', serif;
+    padding: 0 40px;
+}
