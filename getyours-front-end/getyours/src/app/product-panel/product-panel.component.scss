@@ -75,11 +75,13 @@ $accent-color: #493e99;
     margin-left: 10px;
 }
 
-.reference-link-icon{
+.trash-bin-icon{
     display: block;
     width: 18px;
     height: 18px;
-    background-image: url('../../resources/decoration/link.icon.png');
+    background-image: url('../../resources/decoration/trash_bin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 

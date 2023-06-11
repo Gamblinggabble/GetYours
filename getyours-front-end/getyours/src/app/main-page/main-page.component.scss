@@ -123,6 +123,12 @@ $accent-color: #493e99;
     padding: 110px 0px;
 }
 
+#offcanvasRightSearch{
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: none;
+    padding: 110px 0px;
+}
+
 #offcanvasRightLabel{
     color: $accent-color !important;
     font-size: 30px;
@@ -167,4 +173,9 @@ $accent-color: #493e99;
     font-size: 16px !important;
     font-weight: 600 !important;
     margin-left: 10px !important;
+}
+
+#button-search{
+    background-color: $accent-color;
+    border-color: $accent-color;
 }

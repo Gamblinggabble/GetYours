@@ -8,7 +8,7 @@ declare var bootstrap: any;
 })
 export class MainPageComponent implements AfterViewInit {
   ngAfterViewInit() {
-    var myOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRightFilter'), {backdrop: false, scroll: true});
-
+    var myOffcanvasFilter = new bootstrap.Offcanvas(document.getElementById('offcanvasRightFilter'), {backdrop: false, scroll: true});
+    var myOffcanvasSearch = new bootstrap.Offcanvas(document.getElementById('offcanvasRightSearch'), {backdrop: false, scroll: true});
   }
 }
