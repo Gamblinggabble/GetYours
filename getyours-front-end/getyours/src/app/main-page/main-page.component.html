@@ -6,7 +6,7 @@
                 <div class="logo"></div>
             </div>
             <div class="action-container">
-                <button class="search-button gy-button">
+                <button class="search-button gy-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightSearch" aria-controls="offcanvasRight">
                   <div class="search-button--image action-image"></div>
                 </button>
                 <button class="filter-button gy-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRightFilter" aria-controls="offcanvasRight">
@@ -100,6 +100,20 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightSearch" aria-labelledby="offcanvasRightLabel" >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" id="offcanvasRight-body">
+       <!-- search input -->
+       <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="What are you searching for?" aria-label="search input" aria-describedby="button-addon2">
+        <button class="btn btn-primary" type="button" id="button-search">Search</button>
+      </div>
       </div>
     </div>
 
