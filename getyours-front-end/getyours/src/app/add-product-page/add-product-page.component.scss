@@ -1,0 +1,227 @@
+$accent-color: #493e99;
+
+.add-product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation-bar{
+    display: flex;
+    width: 615px;
+    height: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.logo-container{
+    display: block;
+    position: relative;
+    top: 8px;
+    left: 10px;
+    width: 274px;
+    height: 58px;
+}
+
+.logo{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../resources/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.action-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.gy-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    background-color: $accent-color;
+    margin-left: 11px;
+    border-radius: 50%;
+    border: none;
+}
+
+.gy-button:hover{
+    background-color: #5b50a8;
+}
+
+.action-image{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.back-button--image{
+    position: relative;
+    bottom: 1px;
+    background-image: url('../../resources/decoration/plus.png');
+}
+
+
+.hamburger-menu{
+    display: block;
+    width: 35px;
+    height: 28px;
+    background-image: url('../../resources/decoration/hamburger_menu.png');
+    cursor: pointer;
+}
+
+.border-line {
+    margin-top: 25px;
+    width: 45%;
+    height: 1px;
+    border: 1px dashed #493e99;
+  }
+
+.add-product-heading{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-family: 'Bona Nova', serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 75px;
+    text-align: center;
+    color: #493e99;
+}
+.add-product-form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.add-product--button{
+    font-family: 'Bona Nova', serif;
+    font-weight: 700;
+    font-size: 25px;
+    color:white;
+    height: 54px;
+    width: 10%;
+    margin-left: 30px;
+    background-color: #493e99;
+    border: none;
+    box-shadow: 10px 10px white;
+    cursor: pointer;
+    animation: 0.2s ease-in-out box-shadow-animation-white-out;
+}
+
+.add-product--button:hover{
+    animation: 0.2s ease-in-out box-shadow-animation-white;
+    box-shadow: 3px 3px white;
+}
+
+@keyframes box-shadow-animation-white {
+    from{
+        box-shadow: 10px 10px white;
+    }
+    to{
+        box-shadow: 3px 3px white;
+    }
+}
+
+@keyframes box-shadow-animation-white-out {
+    from{
+        box-shadow: 3px 3px white;
+    }
+    to{
+        box-shadow: 10px 10px white;
+    }
+}
+
+.getyours-input-field{
+    display: block;
+    width: 30%;
+    height: 54px;
+    color: #493e99;
+    margin-left: 452px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    box-shadow: 10px 10px $accent-color;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    padding-left: 15px;
+    font-family: 'Bona Nova',serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 27.15px;
+}
+
+.getyours-input-field:focus{
+    outline: none;
+}
+
+.getyours-input-field::placeholder{
+    color: #493e99;
+    font-family: 'Bona Nova',serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 27.15px;
+
+}
+
+.supported-stores-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.supported-stores-heading{
+    margin-top: 60px;
+    margin-bottom: 5px;
+    font-family: 'Bona Nova', serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    color: #493e99;
+}
+
+.brand-panels{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin: 0;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.offcanvas {
+    background-color: $accent-color;
+}
+
+.offcanvas-title{
+    color: white;
+}
+
+.offcanvas-h5{
+    color: white;
+}
+
+.container{
+    display: flex;
+    width: auto;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}

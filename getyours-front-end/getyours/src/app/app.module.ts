@@ -8,6 +8,9 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { AddProductPanelComponent } from './add-product-panel/add-product-panel.component';
 import { ProductPanelComponent } from './product-panel/product-panel.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import { AddProductPageComponent } from './add-product-page/add-product-page.component';
+import { AddNoProductPanelComponent } from './add-no-product-panel/add-no-product-panel.component';
+import { BrandPanelComponent } from './brand-panel/brand-panel.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { RegisterPageComponent } from './register-page/register-page.component';
     MainPageComponent,
     AddProductPanelComponent,
     ProductPanelComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    AddProductPageComponent,
+    AddNoProductPanelComponent,
+    BrandPanelComponent
   ],
   imports: [
     BrowserModule,

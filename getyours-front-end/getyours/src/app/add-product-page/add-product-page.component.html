@@ -1,0 +1,57 @@
+<body>
+    <div class="add-product-container">
+        <nav class="navigation-bar">
+            <a class="hamburger-menu" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></a>
+            <div class="logo-container">
+                <div class="logo"></div>
+            </div>
+            <div class="action-container">
+                <button class="back-button gy-button">
+                  <div class="back-button--image action-image"></div>
+                </button>
+            </div>
+        </nav>
+        <div class="border-line"></div>
+        <h1 class="add-product-heading">Add a new product</h1>
+        <form action="" method="post" class="add-product-form">
+            <input type="url" name="" id="url-input"  class="add product getyours-input-field" placeholder="Paste your URL here">
+            <button type="submit" class="add-product--button">Add</button>
+        </form>
+    </div>
+
+    <div class="supported-stores-container">
+        <h2 class="supported-stores-heading">Supported Stores</h2>
+        <div class="brand-panels">
+            <app-brand-panel></app-brand-panel>
+            <app-brand-panel></app-brand-panel>
+            <app-brand-panel></app-brand-panel>
+            <app-brand-panel></app-brand-panel>
+            <app-brand-panel></app-brand-panel>
+            <app-brand-panel></app-brand-panel>
+            <app-brand-panel></app-brand-panel>
+            <app-brand-panel></app-brand-panel>
+        </div>
+    </div>
+
+
+
+    <!-- offcanvas left -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" data-bs-theme="dark">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <img src="https://th.bing.com/th/id/OIP.WQvPJdjEpvh8OTXB-NBfJwHaHw?pid=ImgDet&rs=1" alt="Profile Picture" class="profile-picture">
+                  </div>
+                  <div class="col-auto">
+                    <h5 class="offcanvas-h5">John Doe</h5>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-outline-light">Exit</button>
+            </div>
+        </div>
+      </div>
