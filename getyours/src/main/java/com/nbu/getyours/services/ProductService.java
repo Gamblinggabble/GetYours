@@ -48,4 +48,8 @@ public class ProductService {
     public List<Product> getAllByCategory(Category category) {
         return productRepository.getAllByCategory(category);
     }
+
+    public List<Product> getAllByBrand(String brand) {
+        return productRepository.getAllByBrand(brand);
+    }
 }
