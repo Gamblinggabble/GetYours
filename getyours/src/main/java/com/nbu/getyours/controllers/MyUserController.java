@@ -16,7 +16,7 @@ public class MyUserController {
 
     @GetMapping("/all")
     public List<MyUser> getAll() {
-        return this.userService.getALl();
+        return this.userService.getAll();
     }
 
     @GetMapping("/{id}")
