@@ -1,6 +1,7 @@
 package com.nbu.getyours.services;
 
 import com.nbu.getyours.models.Category;
+import com.nbu.getyours.models.Product;
 import com.nbu.getyours.repos.CategoryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
