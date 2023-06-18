@@ -8,6 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface WebsiteRepo extends JpaRepository<Website, String> {
-
     Optional<Website> findByName(String name);
 }

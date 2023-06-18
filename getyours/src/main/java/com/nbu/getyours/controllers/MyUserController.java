@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "http://localhost:4200")
 public class MyUserController {
 
     @Autowired
@@ -26,6 +27,8 @@ public class MyUserController {
 
     @GetMapping()
     public MyUser getByEmail(@RequestParam String email) {
+        System.out.println("In controller getByEmail - " + email);
+//        System.out.println(this.userService.getByEmail(email).getEmail());
         return this.userService.getByEmail(email);
     }
 

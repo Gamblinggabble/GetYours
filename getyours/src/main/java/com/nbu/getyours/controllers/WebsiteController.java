@@ -3,15 +3,13 @@ package com.nbu.getyours.controllers;
 import com.nbu.getyours.models.Website;
 import com.nbu.getyours.services.WebsiteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/websites")
+@CrossOrigin(origins = "http://localhost:4200")
 public class WebsiteController {
 
     @Autowired

@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProductController {
 
     @Autowired
@@ -33,13 +34,13 @@ public class ProductController {
         return this.productService.getById(id);
     }
 
-    @PostMapping("/add")
+    @PostMapping("/add2")
     public Product add(@RequestBody Product product) {
         return this.productService.add(product);
     }
 
     @PostMapping("delete")
-    public void deleteUser(@RequestBody Product product) {
+    public void delete(@RequestBody Product product) {
         this.productService.delete(product);
     }
 

@@ -6,9 +6,9 @@
         <div class="sign-in-and-illustrations-container">
             <div class="sign-in-container">
                 <h3 class="sign-in--heading">Sign in</h3>
-                <form action="" method="post" class="sign-in--form">
-                    <input type="email" name="" id="" class="sign-in--email getyours-input-field" placeholder="E-mail">
-                    <input type="password" name="" id="" class="sign-in--password getyours-input-field" placeholder="Password">
+                <form [formGroup]="formData" (ngSubmit)="onSubmit()" action="" method="post" class="sign-in--form">
+                    <input type="email" formControlName="email" name="" id="" class="sign-in--email getyours-input-field" placeholder="E-mail" required>
+                    <input type="password" formControlName="password" name="" id="" class="sign-in--password getyours-input-field" placeholder="Password" required>
                     <button type="submit" class="sing-in--button">Login</button>
                 </form>
                 <a href="/register-page-component" class="sign-in--register-link">No account? <b>Sign up and Get Yours!</b></a>

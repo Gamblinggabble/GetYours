@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 public class ProductItem {
     @Id
     private String item_url;
-    @ManyToOne()
+    @ManyToOne
     private Product product;
     @ManyToOne
     private Website website;
@@ -21,12 +21,12 @@ public class ProductItem {
     public ProductItem() {
     }
 
-    public ProductItem(Product product, Website website, BigDecimal initialPrice, BigDecimal newPrice, String item_url, String picture_url) {
+    public ProductItem(String item_url, Product product, Website website, BigDecimal initialPrice, BigDecimal newPrice, String picture_url) {
+        this.item_url = item_url;
         this.product = product;
         this.website = website;
         this.initialPrice = initialPrice;
         this.newPrice = newPrice;
-        this.item_url = item_url;
         this.picture_url = picture_url;
     }
 

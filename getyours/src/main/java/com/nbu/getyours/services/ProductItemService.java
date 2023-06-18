@@ -3,10 +3,13 @@ package com.nbu.getyours.services;
 import com.nbu.getyours.models.Category;
 import com.nbu.getyours.models.Product;
 import com.nbu.getyours.models.ProductItem;
+import com.nbu.getyours.models.Website;
 import com.nbu.getyours.repos.ProductItemRepo;
+import com.nbu.getyours.scripts.PythonScriptRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -20,6 +23,8 @@ public class ProductItemService {
     private CategoryService categoryService;
     @Autowired
     private ProductService productService;
+    @Autowired
+    private SubscriptionService subscriptionService;
 
     public List<ProductItem> getAll() {
         return this.productItemRepository.findAll();
@@ -65,4 +70,29 @@ public class ProductItemService {
         this.productItemRepository.delete(item);
     }
 
+    public ProductItem upload(String productUrl) {
+        if (this.productItemRepository.findById(productUrl).isEmpty()) {
+            ProductItem newProductItem = createNewItem(productUrl);
+//            ProductItem newProduct = new ProductItem(productUrl, new Product(), new Website(), BigDecimal.valueOf(10.0), BigDecimal.valueOf(30.0), "https://");
+            return newProductItem;
+        } else {
+            return this.productItemRepository.findById(productUrl).get();
+        }
+    }
+
+    private ProductItem createNewItem(String productUrl) {
+        PythonScriptRunner scriptRunner = new PythonScriptRunner();
+        String divs = scriptRunner.executeScript();
+        ProductItem newItem = new ProductItem(productUrl, new Product(), new Website(), BigDecimal.valueOf(10.0), BigDecimal.valueOf(30.0), "https://");
+        return newItem;
+    }
+
+    public List<ProductItem> getByUser(String userEmail) {
+        List<ProductItem> products = this.subscriptionService.getAllByUser(userEmail);
+        System.out.println("in PIService, products: " + products.get(0).getWebsite().getName());
+        List<ProductItem> itemsOfUser = this.getAll().stream().filter(i -> products.contains(i)).collect(Collectors.toList());
+        System.out.println("in PIService, itemsOfUser: " + itemsOfUser.get(0).getWebsite().getName());
+
+        return itemsOfUser;
+    }
 }

@@ -15,10 +15,10 @@
             </div>
         </nav>
         <div class="product-panels">
-            <app-add-product-panel></app-add-product-panel>
+            <!-- <app-add-product-panel></app-add-product-panel> -->
             <app-add-no-product-panel></app-add-no-product-panel> 
-            <app-product-panel></app-product-panel>
-            <app-product-panel></app-product-panel>
+            
+            <app-product-panel *ngFor="let item of itemsReal" [itemUrl]="item.item_url" [websiteLogoUrl]="item.website?.logoUrl" [websiteUrl]="item.website?.baseUrl" [websiteName]="item.website?.name" [imageUrl]="item.picture_url" [name]="item.product?.name" [initialPrice]="item.initialPrice" [newPrice]="item.newPrice"></app-product-panel>
         </div>
 
 

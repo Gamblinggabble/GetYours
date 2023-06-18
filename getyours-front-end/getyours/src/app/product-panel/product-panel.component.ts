@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-panel',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-panel.component.scss']
 })
 export class ProductPanelComponent {
-
+  @Input() itemUrl?: string;
+  @Input() websiteUrl?: string;
+  @Input() websiteLogoUrl?: string;
+  @Input() websiteName?: string;
+  @Input() imageUrl?: string;
+  @Input() name?: string;
+  @Input() initialPrice?: string;
+  @Input() newPrice?: string;
 }
