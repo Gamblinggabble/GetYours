@@ -15,12 +15,10 @@
             </div>
         </nav>
         <div class="product-panels">
-            <!-- <app-add-product-panel></app-add-product-panel> -->
-            <app-add-no-product-panel></app-add-no-product-panel> 
-            
+            <app-add-product-panel></app-add-product-panel>
+            <app-add-no-product-panel *ngIf="itemsReal.length === 0"></app-add-no-product-panel>  
             <app-product-panel *ngFor="let item of itemsReal" [itemUrl]="item.item_url" [websiteLogoUrl]="item.website?.logoUrl" [websiteUrl]="item.website?.baseUrl" [websiteName]="item.website?.name" [imageUrl]="item.picture_url" [name]="item.product?.name" [initialPrice]="item.initialPrice" [newPrice]="item.newPrice"></app-product-panel>
         </div>
-
 
     </div>
 
@@ -35,13 +33,13 @@
             <div class="container">
                 <div class="row align-items-center">
                   <div class="col-auto">
-                    <img src="https://th.bing.com/th/id/OIP.WQvPJdjEpvh8OTXB-NBfJwHaHw?pid=ImgDet&rs=1" alt="Profile Picture" class="profile-picture">
+                    <img src="https://static.vecteezy.com/system/resources/previews/000/550/731/original/user-icon-vector.jpg" alt="Profile Picture" class="profile-picture">
                   </div>
                   <div class="col-auto">
-                    <h5 class="offcanvas-h5">John Doe</h5>
+                    <h5 class="offcanvas-h5">{{ loggedInUser }}</h5>
                   </div>
                 </div>
-                <button type="button" class="btn btn-outline-light">Exit</button>
+                <button type="button" class="btn btn-outline-light" (click)="logOut()">Exit</button>
             </div>
         </div>
       </div>
@@ -64,15 +62,15 @@
             <ul class="list-group">
               <li class="list-group-item">
                 <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+                <label class="form-check-label" for="firstCheckbox">Clothes</label>
               </li>
               <li class="list-group-item">
                 <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                <label class="form-check-label" for="secondCheckbox">Bags</label>
               </li>
               <li class="list-group-item">
                 <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                <label class="form-check-label" for="thirdCheckbox">Shoes</label>
               </li>
             </ul>
           </div>
@@ -87,15 +85,15 @@
             <ul class="list-group">
               <li class="list-group-item">
                 <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+                <label class="form-check-label" for="firstCheckbox">Prada</label>
               </li>
               <li class="list-group-item">
                 <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-                <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                <label class="form-check-label" for="secondCheckbox">Guess</label>
               </li>
               <li class="list-group-item">
                 <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-                <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                <label class="form-check-label" for="thirdCheckbox">Gucci</label>
               </li>
             </ul>
           </div>

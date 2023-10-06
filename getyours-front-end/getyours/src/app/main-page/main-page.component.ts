@@ -2,6 +2,8 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Item } from '../model/Item';
 import { ItemService } from '../service/item.service';
 import { Observable } from 'rxjs';
+import { UserService } from '../service/user-service';
+import { Router } from '@angular/router';
 declare var bootstrap: any;
 
 @Component({
@@ -14,12 +16,17 @@ export class MainPageComponent implements AfterViewInit {
   public items?: Observable<Item[]>;
   public itemsReal: Item[] = [];
 
-  constructor(private itemService: ItemService) {}
+  public loggedInUser?: string = this.userService.getLoggedInUser();
+
+  constructor(
+    private itemService: ItemService, 
+    private userService: UserService,
+    private router: Router
+  ) {}
 
   ngAfterViewInit() {
     var myOffcanvasFilter = new bootstrap.Offcanvas(document.getElementById('offcanvasRightFilter'), {backdrop: false, scroll: true});
     var myOffcanvasSearch = new bootstrap.Offcanvas(document.getElementById('offcanvasRightSearch'), {backdrop: false, scroll: true});
-    var myOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRightFilter'), {backdrop: false, scroll: true});
   }
 
   ngOnInit() {
@@ -33,5 +40,12 @@ export class MainPageComponent implements AfterViewInit {
         this.itemsReal[index] = objs[index];
       }
     });
+  }
+
+  logOut() {
+    console.log("exit!!");
+    this.userService.logoutUser();
+    this.router.navigateByUrl('login-page-component');
+    console.log("after EXIT " + this.userService.getLoggedInUser());
   }
 }

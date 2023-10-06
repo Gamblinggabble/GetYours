@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-product-panel',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AddProductPanelComponent {
 
+  constructor(private router: Router) {}
+
+  goToAddProductPage() {
+    this.router.navigateByUrl('add-product-page-component');
+  }
 }
